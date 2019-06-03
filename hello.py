@@ -1,11 +1,15 @@
+"""Cloud Foundry test"""
 from flask import Flask
+import os
+
 app = Flask(__name__)
 
-@app.route("/")
-def hello():
-  return "Hello World!"   
+print(os.getenv("PORT"))
+port = int(os.getenv("PORT", 5000))
 
-if __name__ == "__main__":
-   app.debug = True
+@app.route('/')
+def hello_world():
+    return 'Hello World! I am running on port ' + str(port)
 
-app.run()
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=port)
