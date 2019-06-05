@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+   <body>
+
+   <center>
+      <header> <h1> This page lists the Student records </h1>
+      </header>
+      <br> <br>
+      <table border = 1>
+         <thead>
+            <td>ID</td>
+            <td>Last Name</td>
+            <td>First Name</td>
+            <td>Address</td>
+            <td>City</td>
+            <td>Enrollment Year</td>
+            <td>Notes</td>
+         </thead>
+
+         {% for row in rows %}
+         <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td> {{ row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td> {{ row[4]}}</td>
+            <td>{{row[5]}}</td>
+            <td>{{row[6]}}</td>
+            <!-- <td> <img src="static/{{row['Picture']}}" alt="Img"></td> -->
+            <!-- <td>{{row['Keywords']}}</td> -->
+         </tr>
+         {% endfor %}
+      </table>
+
+      <br>
+      <h2> <a href = "/">Home</a> </h2>
+   </body>
+</html>
