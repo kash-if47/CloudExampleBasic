@@ -1,0 +1,18 @@
+<html>
+   <body>      
+      <center>
+      <header> <h1> Delete Student </h1> </header>
+      <br> <br>
+      <form action = "{{ url_for('delstudent') }}" method = "POST">
+      <h3>Enter Student ID for the student you with to delete:</h3>
+      ID<br>
+
+      <input type = "number" name = "id" /></br>
+        
+      <input type = "submit" value = "submit" /><br>
+      
+      </form>
+      <br>
+      <h2> <a href = "/">Home</a> </h2>
+   </body>
+</html>
